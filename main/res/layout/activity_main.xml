@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/emoji_button"
+        android:padding="4dp"
+        android:src="@drawable/ic_action_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <ImageView
+        android:id="@+id/submit_button"
+        android:padding="4dp"
+        android:src="@drawable/ic_send"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <com.vanniktech.emoji.EmojiEditText
+        android:id="@+id/emojicon_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/emoji_button"
+        android:layout_toLeftOf="@+id/submit_button"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLines="3"/>
+
+
+    <ListView
+        android:id="@+id/list_of_message"
+        android:layout_alignParentTop="true"
+        android:dividerHeight="16dp"
+        android:layout_above="@+id/emojicon_edit_text"
+        android:divider="@android:color/transparent"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        ></ListView>
+
+</RelativeLayout>
